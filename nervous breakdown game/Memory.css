@@ -1,0 +1,49 @@
+#game_board {
+    width: 310px;
+    height: 340px;
+    overflow: hidden;
+}
+
+.card {
+    width: 15%; /* カードの幅を15%に設定 */
+    height: 20%; /* カードの高さを幅の15%に合わせる */
+    border: 1px solid silver;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: gray 2px 2px;
+    background: white;
+    float: left;
+    cursor: pointer;
+    margin: 1%; /* カードの間隔を調整 */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* カードの裏面 */
+.back {
+    background-image: url('card_back.png');
+    background-size: 100% 100%;
+}
+
+/* 終了時 */
+.finish {
+    opacity: 0;
+    cursor: default;
+}
+
+/* 経過秒数 */
+#result {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
