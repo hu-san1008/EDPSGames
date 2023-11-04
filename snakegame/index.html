@@ -147,6 +147,41 @@
             }
         });
 
+        //スマホなどのタップ判定
+        document.addEventListener('touchstart', handleTouch);
+
+        function handleTouch(event) {
+            const touchX = event.touches[0].clientX;
+            const touchY = event.touches[0].clientY;
+            const canvasRect = canvas.getBoundingClientRect();
+            const canvasX = touchX - canvasRect.left;
+            const canvasY = touchY - canvasRect.top;
+
+            const deltaX = canvasX - (snake.x * grid);
+            const deltaY = canvasY - (snake.y * grid);
+
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                // 横方向の移動
+                if (deltaX > 0) {
+                    snake.dx = 1;
+                    snake.dy = 0;
+                } else {
+                    snake.dx = -1;
+                    snake.dy = 0;
+                }
+            } else {
+                // 縦方向の移動
+                if (deltaY > 0) {
+                    snake.dx = 0;
+                    snake.dy = 1;
+                } else {
+                    snake.dx = 0;
+                    snake.dy = -1;
+                }
+            }
+        }
+
+
     </script>
 </body>
 </html>
