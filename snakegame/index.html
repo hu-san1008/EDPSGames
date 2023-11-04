@@ -114,12 +114,6 @@
                 item.y = Math.floor(Math.random() * stage);
             }
 
-            if (snake.body.some(segment => segment.x === snake.x && segment.y === snake.y)) {
-                // ゲームオーバー処理
-                alert("自分自身の体にぶつかりました");
-                init(); // ゲームをリセットする
-            }
-
         }
 
         init();
