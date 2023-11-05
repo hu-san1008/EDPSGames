@@ -118,7 +118,7 @@ class Enemy extends SpriteActor {
         const hitArea = new Rectangle(0, 0, 16, 16);
         super(x, y, sprite, hitArea, ['enemy']);
 
-        this.maxHp = 50;
+        this.maxHp = 150;
         this.currentHp = this.maxHp;
 
         this._interval = 120;

@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" media="screen" href="style.css" />
     <title>弾幕シューティング</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+      #game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #gameCanvas {
+        border: 2px solid #000;
+        margin: 20px auto;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14px;
+      }
+    </style>
     <script defer src="engine.js"></script>
     <script defer src="danmaku.js"></script>
   </head>
@@ -12,5 +38,17 @@
     <header>
       <h2>シューティングゲーム</h2>
     </header>
+    <div id="game-container">
+      <h3>操作方法(PC)</h3>
+      <p>
+        スペースキーでスタート<br />
+        右矢印キー : 自機（ロケット）を右に移動<br />
+        左矢印キー : 自機（ロケット）を左に移動<br />
+        上矢印キー : 自機（ロケット）を上に移動<br />
+        下矢印キー : 自機（ロケット）を下に移動<br />
+        スペースキー　:　弾を撃つ<br />
+        ゲームクリアかゲームオーバーになったら、エンターキーでタイトルに戻る
+      </p>
+    </div>
   </body>
 </html>
