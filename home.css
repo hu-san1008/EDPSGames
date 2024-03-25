@@ -70,3 +70,10 @@ button:hover {
 a {
   text-align: center;
 }
+
+.description {
+  max-width: 1000px; /* 最大幅を設定 */
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 120px;
+}
